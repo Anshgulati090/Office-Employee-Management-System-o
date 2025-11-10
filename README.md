@@ -78,7 +78,7 @@ office\_emp\_proj/
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/KrVikashGupta/office-employee-management.git
+git clone https://github.com/Username/office-employee-management.git
 cd office-employee-management
 ````
 
@@ -135,9 +135,7 @@ Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
 
 ## 👨‍💼 Author
 
-**Vikash Kumar Gupta**
-📧 [vikashkumargupta907@gmail.com](mailto:vikashkumargupta907@gmail.com)
-🔗 [LinkedIn](https://www.linkedin.com/in/vikash1995) | [GitHub](https://github.com/KrVikashGupta)
+**Ansh Gulati**
 
 ---
 
