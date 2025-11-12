@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    container_name: django_app
+    command: gunicorn office_emp_proj.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - "8001:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    restart: always
+    logging:
+      driver: "splunk"
+      options:
+        splunk-url: "https://localhost:8000"
+        splunk-token: "72b78f0e-79ed-4a49-9028-16acd1217565"
+        splunk-insecureskipverify: "true"
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: office_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_data:

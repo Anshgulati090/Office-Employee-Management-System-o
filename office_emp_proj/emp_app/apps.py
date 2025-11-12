@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class EmpAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'emp_app'
+    name = 'office_emp_proj.emp_app'
